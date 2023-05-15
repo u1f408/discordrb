@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/shardlab/discordrb'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features|examples|lib/discordrb/webhooks)/}) }
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features|examples)/}) }
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.metadata = {
@@ -28,8 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'opus-ruby'
   spec.add_dependency 'rest-client', '>= 2.0.0'
   spec.add_dependency 'websocket-client-simple', '>= 0.3.0'
-
-  spec.add_dependency 'discordrb-webhooks', '~> 3.4.2'
 
   spec.required_ruby_version = '>= 2.7'
 
